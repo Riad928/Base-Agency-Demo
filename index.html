@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,498 +8,777 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-
 </head>
+
 <body>
 
-            
-      <!-- ==================== HEADER STARTS  ================= -->
-      <header class="bg-gray-700 sticky top-0 z-50 text-white">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 md:h-24 flex justify-between items-center">
-               
-                <!-- Logo -->
-                <a href="#">
-                    <img src="/photo/images.png" alt="Logo" class="w-12 h-12 rounded-xl">
-                </a>
 
-                <!-- Desktop Menu   -->
-                <nav class="hidden md:block">
-                    <ul class="flex space-x-6">
-                        <li><a href="#Home" class="text-lg px-4 py-2 rounded-md hover:bg-blue-600">Home</a></li>
-                        <li><a href="#about"  class="text-lg px-4 py-2 rounded-md hover:bg-blue-600">Features</a></li>
-                        <li><a href="#service"  class="text-lg px-4 py-2 rounded-md hover:bg-blue-600">Pages</a></li>
-                        <li><a href="#contact"  class="text-lg px-4 py-2 rounded-md hover:bg-blue-600">Support</a></li>
-                    </ul>
-                </nav>
+    <!-- ==================== HEADER STARTS  ================= -->
+    <header class="bg-gray-700 sticky top-0 z-50 text-white shadow-md md:shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 md:h-20 flex justify-between items-center">
 
-                <div class="flex items-center gap-4 hidden md:flex">
-                    <button type="sign up" class="border rounded-xl px-6 py-3 bg-blue-600 text-white">Sign In</button>
-                    <button type="sign up" class="border rounded-xl px-6 py-3 bg-blue-600 text-white">Sign Up</button>
-                </div>
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="/photo/images.png" alt="Company Logo" class="w-10 h-10 rounded-lg">
+                <strong class="text-xl font-semibold text-white">Demo</strong>
 
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-white px-4 py-2.5 "><i class="fa-solid fa-bars"></i></button>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-2">
+                    <li><a href="#home" class="text-md px-4 py-2 rounded-md hover:bg-blue-600 transition">Home</a></li>
+                    <li><a href="#about" class="text-md px-4 py-2 rounded-md hover:bg-blue-600 transition">Features</a>
+                    </li>
+                    <li><a href="#service"
+                            class="text-md px-4 py-2 rounded-md hover:bg-blue-600 transition">Services</a></li>
+                    <li><a href="#price" class="text-md px-4 py-2 rounded-md hover:bg-blue-600 transition">Prices</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-md px-4 py-2 rounded-md hover:bg-blue-600 transition">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <!-- buttons -->
+            <div class="hidden md:flex gap-4">
+                <button type="button"
+                    class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Sign
+                    In</button>
+
+                <button type="button"
+                    class="rounded-lg px-5 py-2 font-medium bg-red-600 hover:bg-red-700 text-white transition duration-300">Sign
+                    Up</button>
             </div>
 
-                <!-- Mobile Menu -->
-                <div class="hidden md:hidden space-x-6 px-4">
-                    <ul>
-                        <li><a href="#Home" class="text-lg hover:text-blue-600">Home</a></li>
-                        <li><a href="#about" class="text-lg hover:text-blue-600">Features</a></li>
-                        <li><a href="#service" class="text-lg hover:text-blue-600">Pages</a></li>
-                        <li><a href="#contact" class="text-lg hover:text-blue-600">Support</a></li>
-                    </ul>
-                </div>
-        </header>
-     
+            <!-- Mobile Menu Button -->
+            <button aria-label="toggle-menu" aria-expanded="false" id="mobilebtn"
+                class="md:hidden text-white px-4 py-2.5 "><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobilemenu" class="hidden md:hidden space-x-4 px-6 pb-6 bg-gray-800">
+            <ul class="space-y-3 mb-4">
+                <li><a href="#home" class="text-lg hover:text-blue-600">Home</a></li>
+                <li><a href="#about" class="text-lg hover:text-blue-600">Features</a></li>
+                <li><a href="#service" class="text-lg hover:text-blue-600">Services</a></li>
+                <li><a href="#price" class="text-lg hover:text-blue-600">Prices</a></li>
+                <li><a href="#contact" class="text-lg  hover:bg-blue-600">Contacts</a></li>
+            </ul>
+
+            <button type="button"
+                class="w-full rounded-lg px-5 py-2 font-medium bg-blue-600 hover:bg-blue-700 text-white transition duration-300">Sign
+                In</button>
+            <button type="button"
+                class="w-full rounded-lg px-5 py-2 font-medium bg-red-600 hover:bg-red-700 text-white transition duration-300">Sign
+                Up</button>
+        </div>
+    </header>
+    <!-- ==================== HEADER END  ================= -->
+
+
     <main>
-       
+
         <!-- ==================== HERO STARTS ================= -->
-        <Section id="hero" class="py-24 md:py-32">
-            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-6">
-        
-                <!-- hero text -->
-                <div class="md:w-1/2">
-                    <h1 class="text-4xl md:text-5xl font-extrabold">We specialize in UI/U, Web  Development, Digital Marketing.</span></h1>
-                    <p class="text-md text-gray-600 mt-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid quasi repellat
-                        voluptatem magni accusamus maxime nostrum nisi, labore ullam eaque?</p>
-                       
-                   <div class="flex flex-col md:flex-row items-center justify-center gap-1 mt-8">
-                    <button
-                        class="border rounded-full shadow-lg px-6 py-4 bg-blue-600 text-white text-xl tracking-wide transition-all duration-300 ease-out md:hover:-translate-y-1">Get
-                        started Now
-                    </button>
-                    <div class="max-w-xl mx-auto">
-                        <h2 class="text-lg font-semibold">Call us: 01743425540</h2>
+        <section id="home" class="py-24 md:py-32 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Hero Text -->
+                <div class="space-y-6">
+                    <!-- Small Badge -->
+                    <p class="inline-block px-4 py-1 text-sm font-medium bg-blue-100 text-blue-600 rounded-full">
+                        Digital Agency
+                    </p>
+
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                        We specialize in <span class="text-blue-600">UI/UX, Web Development, Digital Marketing</span>.
+                    </h1>
+
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-xl">
+                        We craft high-performing digital experiences that help brands grow faster and smarter in the
+                        modern
+                        world.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                        <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full shadow-lg 
+                      hover:shadow-xl transition duration-300 hover:-translate-y-1 font-medium text-lg">
+                            Get Started
+                        </a>
+                        <a href="#about" class="inline-block px-8 py-4 rounded-full border border-gray-300 
+                      hover:bg-gray-100 transition text-lg font-medium">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="mt-8 text-gray-700">
+                        <p class="font-semibold">Call us: <span class="text-blue-600">01743425540</span></p>
                         <p class="text-gray-500">For any question or concern</p>
                     </div>
-                   </div>
                 </div>
-                
-                <!-- hero photo -->
-                <div class="md:w-1/2 mt-4 flex justify-center">
-                    <img src="/images.jpg" alt="logo" class="w-100 h-80 object-cover border-none rounded-lg">
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+                    <img src="/images.jpg" alt="hero" class="relative rounded-3xl shadow-2xl w-full object-cover">
                 </div>
             </div>
-                    
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center mt-24">
-                <div class="flex items-center gap-4">
-                    <strong class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-400 text-4xl text-white"><i class="fa-solid fa-landmark"></i></strong>
-                    <div class="max-w-xl">
-                        <h2 class="text-2xl font-bold">23/7 Support</h2>
-                        <p class="text-md text-gray-400">Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+
+            <!-- Feature Cards -->
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div
+                    class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+                    <div
+                        class="flex items-center justify-center w-20 h-20 rounded-full bg-blue-400 text-white text-3xl mb-4">
+                        <i class="fa-solid fa-landmark"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+                    <p class="text-gray-500">We provide round-the-clock support for all our clients to ensure smooth
+                        operations.
+                    </p>
                 </div>
 
-                <div class="flex items-center gap-4 mt-4 md:mt-0">
-                    <strong class="flex items-center justify-center h-20 w-20 rounded-full bg-green-400 text-4xl text-white"><i class="fa-solid fa-bath"></i></strong>
-                    <div class="max-w-xl">
-                        <h2 class="text-2xl font-bold">Take Ownership</h2>
-                        <p class="text-md text-gray-400">Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <!-- Feature 2 -->
+                <div
+                    class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+                    <div
+                        class="flex items-center justify-center w-20 h-20 rounded-full bg-green-400 text-white text-3xl mb-4">
+                        <i class="fa-solid fa-bath"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-2">Take Ownership</h3>
+                    <p class="text-gray-500">Our team takes full ownership of projects and ensures accountability at
+                        every step.
+                    </p>
                 </div>
 
-                <div class="flex items-center gap-4 mt-4 md:mt-0">
-                    <strong class="flex items-center justify-center h-20 w-20 rounded-full bg-orange-400 text-4xl text-white"><i class="fa-solid fa-people-group"></i></strong>
-                    <div class="max-w-xl">
-                        <h2 class="text-2xl font-bold">Team Work</h2>
-                        <p class="text-md text-gray-400">Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <!-- Feature 3 -->
+                <div
+                    class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2">
+                    <div
+                        class="flex items-center justify-center w-20 h-20 rounded-full bg-orange-400 text-white text-3xl mb-4">
+                        <i class="fa-solid fa-people-group"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-2">Team Work</h3>
+                    <p class="text-gray-500">Collaboration is at the heart of everything we do, ensuring high-quality
+                        results.
+                    </p>
                 </div>
+
             </div>
         </section>
-        
+        <!-- ==================== HERO END ================= -->
         <!-- ==================== ABOUT STARTS  ================= -->
-        <section id="about" class="bg-white py-16">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-4">
-        
-                <!-- About image -->
-                <div class="md:w-1/2 flex flex-col md:flex-row items-center gap-4">
-                   <div class="flex flex-col items-center gap-4">
-                     <img src="/photo/women (1).jpg" alt="photo" class="w-60 h-60 border-none object-cover border rounded-lg">
-                     <img src="/photo/women(1).jpg" alt="photo" class="w-60 h-60 border-none object-cover border rounded-lg">
-                  </div>
-                     <img src="/photo/women 3.jpg" alt="photo" class="w-60 h-100 border-none object-cover border rounded-lg">
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Image Side -->
+                    <div class="grid grid-cols-2 gap-6">
+
+                        <img src="/photo/women (1).jpg" class="rounded-2xl shadow-lg object-cover w-full h-64">
+
+                        <img src="/photo/women(1).jpg" class="rounded-2xl shadow-lg object-cover w-full h-64 mt-8">
+
+                        <img src="/photo/women 3.jpg" class="rounded-2xl shadow-xl object-cover w-full h-72 col-span-2">
+                    </div>
+
+                    <!-- Text Side -->
+                    <div>
+
+                        <p class="text-blue-600 font-semibold uppercase tracking-widest mb-4">
+                            Why Choose Us
+                        </p>
+
+                        <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                            We Make Our Customers Happy By Giving
+                            The Best Services.
+                        </h2>
+
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            It is a long established fact that a reader will be distracted
+                            by the readable content of a page when looking at its layout.
+                            The point of using Lorem Ipsum is that it has a more-or-less
+                            normal distribution of letters.
+                        </p>
+
+                        <a href="#contact" class="inline-block bg-blue-600 text-white 
+                              px-6 py-3 rounded-full 
+                              shadow-lg hover:shadow-xl 
+                              transition duration-300 
+                              hover:-translate-y-1">
+                            Contact Us
+                        </a>
+
+                    </div>
 
                 </div>
-        
-                <!-- About text -->
-                <div class="md:w-1/2">
-                    <h2 class="text-xl font-bold text-blue-500 mb-8">Why Choose Us</h2>
-                    <h3 class="text-5xl  font-bold mb-4">We Make Our customers happy by giving Best services.</h3>
-                    <p class="text-gray-600 mb-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
-                    layout. The point of using Lorem Ipsum.</p>
-                    <a href="#contact"
-                        class="border rounded-lg bg-blue-500 text-white shadow-lg px-4 py-2 inline-block mt-6 transition-all duration-300 ease-out md:hover:-translate-y-1">Contact Me</a>
-                </div> 
             </div>
         </section>
+        <!-- ==================== ABOUT END  ================= -->
 
-        <!-- ==================== OUT TEAM SECTION ================= -->
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                <div class="text-center">
-                    <h1 class="text-5xl font-bold mb-6">Meet With Our </br>Creative Dedicated Team</h1>
-                    <p class="text-md text-gray-500 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing <br> Reprehenderit, deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, similique.</p>
-                </div>
-                <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 mt-12">
-                   <div class="">
-                      <img src="/photo/women ceo.jpg" alt="ceo" class="rounded h-80 w-80 object-cover ">
-                      <h1 class="text-3xl mt-6 text-center">Olivia Andrium</h1>
-                      <p class="text-xl mt-2 text-center text-gray-600">Product Manager</p>
-                   </div>
-
-                <div class="">
-                    <img src="/photo/women ceo 2.jpg" alt="ceo" class="rounded h-80 w-80 object-cover ">
-                    <h1 class="text-3xl mt-6 text-center">Jemse Kemorun</h1>
-                    <p class="text-xl mt-2 text-center text-gray-600">Product Manager</p>
-                </div>
-
-                <div class="">
-                    <img src="/photo/women ceo 3.jpg" alt="ceo" class="rounded h-80 w-80 object-cover ">
-                    <h1 class="text-3xl mt-6 text-center">Avi Pestarica</h1>
-                    <p class="text-xl mt-2 text-center text-gray-600">Product Manager</p>
-                </div>             
-            </div>
-        </div>
-    </section>
-        
-        <!-- ====================  SERVICES SECTION ================= -->
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-               <h1 class="text-5xl font-bold text-center mb-16">We Offer The Best <br> Quality Service for You</h1>
-             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8">
-                     <strong class="text-4xl mb-16 text-blue-600"><i class="fa-solid fa-user"></i></strong>
-                    <h1 class="text-3xl font-semibold mt-6">Crafted for Startups</h1>
-                    <p class="text-gray-500 mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-                </div>
-
-                <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8">
-                    <strong class="text-4xl mb-16 text-blue-600"><i class="fa-solid fa-sleigh"></i></i></strong>
-                    <h1 class="text-3xl font-semibold mt-6">High-quality Design</h1>
-                    <p class="text-gray-500 mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-                </div>
-
-                <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8">
-                    <strong class="text-4xl mb-16 text-blue-600"><i class="fa-solid fa-volume-high"></i></strong>
-                    <h1 class="text-3xl font-semibold mt-6">All Essential Sections</h1>
-                    <p class="text-gray-500 mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-                </div>
-                <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8">
-                    <strong class="text-4xl mb-16 text-blue-600"><i class="fa-solid fa-sleigh"></i>></i></strong>
-                    <h1 class="text-3xl font-semibold mt-6">Speed Optimized</h1>
-                    <p class="text-gray-500 mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-                </div>
-                <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8">
-                    <strong class="text-4xl mb-16 text-blue-600"><i class="fa-solid fa-volume-high"></i></strong>
-                    <h1 class="text-3xl font-semibold mt-6">Fully Customizable</h1>
-                    <p class="text-gray-500 mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-                </div>
-                <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8">
-                    <strong class="text-4xl mb-16 text-blue-600"><i class="fa-solid fa-user"></i></strong>
-                    <h1 class="text-3xl font-semibold mt-6">Regular Updates</h1>
-                    <p class="text-gray-500 mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-                </div>
-             </div> 
-            </div>
-        </section>
-
-        <!-- ====================  PRICING SECTION ================= -->
-        <section class="py-16">
+        <!-- ==================== OUT TEAM SECTION STARTS================= -->
+        <section class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h1 class="text-5xl font-bold mb-8">We Offer Great <br> Affordable Premium Prices.</h1>
-                    <p class="text-gray-500 ">It is a long established fact that a reader <br> will be distracted by the readable content <br> of a page when looking at its
+                    <h1 class="text-3xl md:text-5xl font-bold mb-6">Meet With Our </br>Creative Dedicated Team</h1>
+                    <p class="text-md text-gray-500 md:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        </br>
+                        Reprehenderit, deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
+                        similique.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10 mt-12">
+
+                    <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl 
+                        transition duration-300 hover:-translate-y-2 
+                        text-center p-6 group">
+
+                        <img src="/photo/women ceo.jpg" alt="ceo"
+                            class="h-80 w-full object-cover rounded-2xl transition duration-500">
+                        <h1 class="text-xl font-semibold mt-6">Olivia Andrium</h1>
+                        <p class="text-gray-500 mt-2">Product Manager</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl 
+                        transition duration-300 hover:-translate-y-2 
+                        text-center p-6 group">
+
+                        <img src="/photo/women ceo 2.jpg" alt="ceo"
+                            class="h-80 w-full object-cover rounded-2xl transition duration-500">
+                        <h1 class="text-xl font-semibold mt-6">Jemse Kemorun</h1>
+                        <p class="text-gray-500 mt-2">Product Manager</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl 
+                        transition duration-300 hover:-translate-y-2 
+                        text-center p-6 group">
+
+                        <img src="/photo/women ceo 3.jpg" alt="ceo" class="rounded h-80 w-80 object-cover ">
+                        <h1 class="text-xl font-semibold mt-6">Avi Pestarica</h1>
+                        <p class="text-gray-500 mt-2">Product Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== OUT TEAM SECTION END================= -->
+
+        <!-- ====================  SERVICES SECTION STARTS ================= -->
+        <section id="service" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+                <!-- Heading -->
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                        We Offer The Best <br> Quality Services for You
+                    </h2>
+                    <p class="text-gray-500 text-lg leading-relaxed">
+                        Our team provides top-notch services that help your business grow, with a focus on design,
+                        speed, and
+                        custom solutions.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Service 1 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 transition duration-300 hover:-translate-y-2 group text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center 
+                            rounded-xl bg-blue-100 text-blue-600 text-2xl 
+                            transition duration-300 group-hover:bg-blue-600 
+                            group-hover:text-white">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6">Crafted for Startups</h3>
+                        <p class="text-gray-500 mt-4 leading-relaxed">
+                            Services designed to help startups grow with scalable solutions and professional guidance.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 transition duration-300 hover:-translate-y-2 group text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center 
+                            rounded-xl bg-blue-100 text-blue-600 text-2xl 
+                            transition duration-300 group-hover:bg-blue-600 
+                            group-hover:text-white">
+                            <i class="fa-solid fa-sleigh"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6">High-Quality Design</h3>
+                        <p class="text-gray-500 mt-4 leading-relaxed">
+                            Modern UI/UX design that enhances user experience and engages your audience effectively.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 transition duration-300 hover:-translate-y-2 group text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center 
+                            rounded-xl bg-blue-100 text-blue-600 text-2xl 
+                            transition duration-300 group-hover:bg-blue-600 
+                            group-hover:text-white">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6">All Essential Sections</h3>
+                        <p class="text-gray-500 mt-4 leading-relaxed">
+                            Complete solutions covering all essential features for your website or app.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 transition duration-300 hover:-translate-y-2 group text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center 
+                            rounded-xl bg-blue-100 text-blue-600 text-2xl 
+                            transition duration-300 group-hover:bg-blue-600 
+                            group-hover:text-white">
+                            <i class="fa-solid fa-tachometer-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6">Speed Optimized</h3>
+                        <p class="text-gray-500 mt-4 leading-relaxed">
+                            Optimized performance for faster load times and smooth user experiences across all devices.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 transition duration-300 hover:-translate-y-2 group text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center 
+                            rounded-xl bg-blue-100 text-blue-600 text-2xl 
+                            transition duration-300 group-hover:bg-blue-600 
+                            group-hover:text-white">
+                            <i class="fa-solid fa-paint-brush"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6">Fully Customizable</h3>
+                        <p class="text-gray-500 mt-4 leading-relaxed">
+                            Tailored services to match your unique brand identity and business goals.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 transition duration-300 hover:-translate-y-2 group text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center 
+                            rounded-xl bg-blue-100 text-blue-600 text-2xl 
+                            transition duration-300 group-hover:bg-blue-600 
+                            group-hover:text-white">
+                            <i class="fa-solid fa-sync-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6">Regular Updates</h3>
+                        <p class="text-gray-500 mt-4 leading-relaxed">
+                            Continuous updates to keep your system modern, secure, and feature-rich.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ====================  SERVICES SECTION END ================= -->
+
+        <!-- ====================  PRICING SECTION STARTS================= -->
+        <section id="price" class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">We Offer Great </br> Affordable
+                        Premium Prices.</h1>
+                    <p class="text-md md:text-lg text-gray-500 leading-relaxed">It is a long established fact that a
+                        reader </br> will be distracted by the
+                        readable content </br> of a page when looking at its
                         layout. The point of using.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8 text-center transition-all duration-300 easu-out lg:hover:-translate-y-2">
-                         <h1 class="text-xl font-bold">Starter</h1>
-                        <h1 class="mt-4"><strong class="text-4xl font-bold">$29</strong>
-                        /per month</h1>
-                        <p class="text-gray-500 mt-2">No credit card required</p>  
-                        <button
-                            class="border mt-8 rounded-full shadow-lg px-6 py-4 bg-sky-600 text-white text-xl tracking-wide transition-all duration-300 ease-out md:hover:-translate-y-1">Try
-                           for free
-                        </button>
-                        <p class="text-gray-500 mt-4">400 GB Storaget</p>
-                        <p class="text-gray-500 mt-2">Unlimited Photos & Videos</p>
-                        <p class="text-gray-500 mt-2">Exclusive Support</p>
-                        <p class="mt-6">7-day free trial</p>
-                    </div>
-        
-                    <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8 text-center transition-all duration-300 easu-out lg:hover:-translate-y-2">
-                        <h1 class="text-xl font-bold">Business</h1>
-                        <h1 class="mt-4"><strong class="text-4xl font-bold">$129</strong>
-                            /per month</h1>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 items-stretch">
+
+                    <!-- Starter -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 text-center transition duration-300 hover:-translate-y-2 flex flex-col">
+                        <h3 class="text-xl font-semibold">Starter</h3>
+
+                        <p class="mt-4">
+                            <span class="text-4xl font-bold">$29</span>
+                            <span class="text-gray-500">/month</span>
+                        </p>
+
                         <p class="text-gray-500 mt-2">No credit card required</p>
-                        <button
-                            class="border mt-8 rounded-full shadow-lg px-6 py-4 bg-blue-600 text-white text-xl tracking-wide transition-all duration-300 ease-out md:hover:-translate-y-1">Try
-                            for free
+
+                        <button class="mt-6 rounded-full px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 transition">
+                            Try for free
                         </button>
-                        <p class="text-gray-500 mt-4">400 GB Storaget</p>
-                        <p class="text-gray-500 mt-2">Unlimited Photos & Videos</p>
-                        <p class="text-gray-500 mt-2">Exclusive Support</p>
-                        <p class="mt-6">7-day free trial</p>
-                    </div>
-        
-                    <div class="rounded-md shadow-md hover:shadow-lg px-6 py-8 text-center transition-all duration-300 easu-out lg:hover:-translate-y-2">
-                        <h1 class="text-xl font-bold">Growth Plan</h1>
-                        <h1 class="mt-4"><strong class="text-4xl font-bold">$59</strong>
-                            /per month</h1>
-                        <p class="text-gray-500 mt-2">No credit card required</p>
-                        <button
-                            class="border mt-8 rounded-full shadow-lg px-6 py-4 bg-red-600 text-white text-xl tracking-wide transition-all duration-300 ease-out md:hover:-translate-y-1">Try
-                            for free
-                        </button>
-                        <p class="text-gray-500 mt-4">400 GB Storaget</p>
-                        <p class="text-gray-500 mt-2">Unlimited Photos & Videos</p>
-                        <p class="text-gray-500 mt-2">Exclusive Support</p>
-                        <p class="mt-6">7-day free trial</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-         
-        <!-- ==================== AFFORDABLE PRICING ================= -->
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h1 class="text-5xl font-bold mb-8">We Offer Great <br> Affordable Premium Prices.</h1>
-                    <p class="text-gray-500 ">It is a long established fact that a reader will be distracted <br> by the readable content of a page when looking at its
-                    layout. The point of using.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    <div class="md:col-span-2 gap-4">
-                       
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <img src="/photo/flower-1.jpg" alt="flower" class="w-full h-auto rounded-lg object-cover transition-all duration-300 easu-out lg:hover:-translate-y-2">
-                            <img src="/photo/flower-2.jpg" alt="flower" class="w-full h-auto rounded-lg object-cover transition-all duration-300 easu-out lg:hover:-translate-y-2">
+
+                        <div class="mt-6 space-y-2 text-gray-600 flex-grow">
+                            <p>400 GB Storage</p>
+                            <p>Unlimited Photos & Videos</p>
+                            <p>Exclusive Support</p>
                         </div>
-                            <img src="/photo/flower-3.jpg" alt="flower" class="mt-4 w-full h-60 rounded-lg object-cover transition-all duration-300 easu-out lg:hover:-translate-y-2">
-                    </div>
-                    <div class="md:col-span-1">
-                    <img src="/photo/flower-3.jpg" alt="flower" class="w-full h-full rounded-lg object-cover transition-all duration-300 easu-out lg:hover:-translate-y-2">
-                    </div>
-                </div>
-            </div>
-        </section>    
-        
-        
-        <!-- ==================== CLIENT TESTIMONIALS ================= -->
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h1 class="text-5xl font-bold mb-8">Client’s Testimonials</h1>
-                    <p class="text-gray-500 ">It is a long established fact that a reader will be <br> distracted by the readable content of a page when looking at its
-                    layout. The point of using.</p>
-                </div>
-                <div class="max-w-5xl mx-auto px-8 py-8 flex flex-col md:flex-row items-center shadow-sm gap-6">
-                    <div class="md:w-1/3">
-                        <img src="/photo/women (1).jpg" alt="women-Ceo" class="h-60 w-full rounded-md object-cover">
+
+                        <p class="mt-6 text-sm text-gray-500">7-day free trial</p>
                     </div>
 
-                    <div class="md:w-2/3">
-                      <p class="text-xl font-bold text-gray-500">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tenetur nemo delectus ex numquam temporibus, placeat dolor odio. Fugit, voluptas repellendus. Magnam ipsa laudantium consequatur commodi natus labore saepe sed."</p>
-                       <p class="mt-12 font-bold">Devid Beckham</p>
-                       <p class="font-bold">Founder & CEO</p>
+                    <!-- Business (Highlighted) -->
+                    <div
+                        class="bg-sky-600 text-white rounded-2xl shadow-2xl p-8 text-center transition duration-300 hover:-translate-y-2 flex flex-col scale-105">
+                        <p class="uppercase text-sm tracking-widest">Most Popular</p>
+
+                        <h3 class="text-xl font-semibold mt-2">Business</h3>
+
+                        <p class="mt-4">
+                            <span class="text-4xl font-bold">$129</span>
+                            <span class="text-sky-100">/month</span>
+                        </p>
+
+                        <p class="mt-2 text-sky-100">No credit card required</p>
+
+                        <button
+                            class="mt-6 rounded-full px-6 py-3 bg-white text-sky-600 font-semibold hover:bg-gray-100 transition">
+                            Try for free
+                        </button>
+
+                        <div class="mt-6 space-y-2 flex-grow">
+                            <p>400 GB Storage</p>
+                            <p>Unlimited Photos & Videos</p>
+                            <p>Exclusive Support</p>
+                        </div>
+
+                        <p class="mt-6 text-sm text-sky-100">7-day free trial</p>
+                    </div>
+
+                    <!-- Growth -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 text-center transition duration-300 hover:-translate-y-2 flex flex-col">
+                        <h3 class="text-xl font-semibold">Growth</h3>
+
+                        <p class="mt-4">
+                            <span class="text-4xl font-bold">$59</span>
+                            <span class="text-gray-500">/month</span>
+                        </p>
+
+                        <p class="text-gray-500 mt-2">No credit card required</p>
+
+                        <button class="mt-6 rounded-full px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 transition">
+                            Try for free
+                        </button>
+
+                        <div class="mt-6 space-y-2 text-gray-600 flex-grow">
+                            <p>400 GB Storage</p>
+                            <p>Unlimited Photos & Videos</p>
+                            <p>Exclusive Support</p>
+                        </div>
+
+                        <p class="mt-6 text-sm text-gray-500">7-day free trial</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- ====================  PRICING SECTION END================= -->
 
-        <!-- ==================== TRUSTED BY GLOBAL BRANDS ================= -->
-        <section class="py-16">
+        <!-- ==================== IMAGE GALLARY STARTS ================= -->
+        <section class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h1 class="text-5xl font-bold mb-8">Trusted by Global Brands</h1>
-                    <p class="text-gray-500 ">It is a long established fact that a reader will be <br> distracted by the readable content of a page when looking at its
-                    layout. The point of using.</p>
+                    <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Our Image Gallery </h1>
+                    <p class="text-md md:text-lg text-gray-500 leading-relaxed">It is a long established fact that a
+                        reader will be distracted <br> by the
+                        readable content of a page when looking at its
+                        layout. The point of using.</p>
                 </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
 
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div class="flex items-center gap-2">
-                        <a href="#">
-                            <img src="/logo/Amazon logo.png" alt="Amazon-logo" class="h-30 w-auto">
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-2">
-                        <a href="#">
-                            <img src="/logo/dropcam logo.png" alt="Amazon-logo" class="h-30 w-auto">
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-2">
-                        <a href="#">
-                            <img src="/logo/google logo.png" alt="Amazon-logo" class="h-30 w-auto">
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-2">
-                        <a href="#">
-                            <img src="/logo/logitech logo.png" alt="Amazon-logo" class="h-30 w-auto">
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-2">
-                        <a href="#">
-                            <img src="/logo/mandiri logo - Copy.png" alt="Amazon-logo" class="h-30 w-auto">
-                        </a>
-                    </div>
-                </div>
-            </div> 
-        </section>
+                    <!-- LEFT SIDE (2 column span) -->
+                    <div class="md:col-span-2 space-y-6">
 
-        <!-- ==================== CONTACT STARTS  ================= -->
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h1 class="text-5xl font-bold mb-8">Let’s Stay Connected</h1>
-                    <p class="text-gray-500 ">It is a long established fact that a reader will be <br> distracted by the readable content of a page when looking at its
-                    layout. The point of using.</p>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-6">
-                    <div class="md:w-1/3 bg-white shadow-xl px-8 py-8">
-                    <div class="mt-">
-                         <h1 class="text-xl font-semibold">Email Address</h1>
-                         <p class="text-lg text-gray-500">support@startup.com</p>
-                    </div>
-                    <div class="mt-8">
-                        <h1 class="text-xl font-semibold">Office Location</h1>
-                        <p class="text-lg text-gray-500">76/A, Green valle, Califonia USA.</p>
-                    </div>
-                    <div class="mt-8">
-                        <h1 class="text-xl font-semibold">Phone Number</h1>
-                        <p class="text-lg text-gray-500">+009 8754 3433 223</p>
-                    </div>
-                    <div class="mt-8">
-                        <h1 class="text-xl font-semibold">Skype Email</h1>
-                        <p class="text-lg text-gray-500">example@yourmail.com</p>
-                    </div>
-                </div>
-        
-                    <div class="md:w-2/3 bg-white shadow-xl px-8 py-8">
-                        <div class="flex flex-col md:flex-row gap-6 items-center">
-                           
-                            <div class="flex-1 space-y-2">
-                                <label for="full-name" class="font-semibold">Full name</label> <br>
-                                <input type="text" id="full-name" class="mt-2 border rounded-xl px-4 py-2 border-gray-500"required>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="overflow-hidden rounded-2xl">
+                                <img src="/photo/flower-1.jpg"
+                                    class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                             </div>
-                            <div class="flex-1 space-y-2">
-                                <label for="email address" class="font-semibold">Email address</label> <br>
-                                <input type="email" id="email-address" class="mt-2 border rounded-xl px-4 py-2 border-gray-500"required>
+
+                            <div class="overflow-hidden rounded-2xl">
+                                <img src="/photo/flower-2.jpg"
+                                    class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden rounded-2xl">
+                            <img src="/photo/flower-3.jpg"
+                                class="w-full h-72 object-cover transition duration-500 hover:scale-105">
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT SIDE (1 column span) -->
+                    <div class="overflow-hidden rounded-2xl">
+                        <img src="/photo/flower-4.jpg"
+                            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== IMAGE GALLERY END ================= -->
+
+        <!-- ==================== CLIENT TESTIMONIALS STARTS ================= -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Client’s Testimonials</h1>
+                    <p class="text-gray-500 text-md md:text-lg leading-relaxed">It is a long established fact that a
+                        reader will be </br> distracted by the
+                        readable content of a page when looking at its
+                        layout. The point of using.</p>
+                </div>
+                <div
+                    class="max-w-5xl mx-auto p-8 bg-white rounded-2xl shadow-lg md:p-12 flex flex-col md:flex-row items-center hover:shadow-xl gap-8 transition duration-300">
+                    <div class="md:w-1/3">
+                        <img src="/photo/women (1).jpg" alt="women-Ceo" class="h-64 w-full rounded-xl object-cover">
+                    </div>
+
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <p class="text-lg md:text-xl font-bold text-gray-600 leading-relaxed mb-8 italic">"Lorem, ipsum
+                            dolor sit amet consectetur adipisicing
+                            elit. Voluptatibus tenetur nemo delectus ex numquam temporibus, placeat dolor odio. Fugit,
+                            voluptas repellendus. Magnam ipsa laudantium consequatur commodi natus labore saepe sed."
+                        </p>
+                        <p class="text-lg mt-12 font-semibold text-gray-900">Devid Beckham</p>
+                        <p class="text-gray-500">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== CLIENT TESTIMONIALS END ================= -->
+
+        <!-- ==================== TRUSTED BY GLOBAL BRANDS STARTS ================= -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Trusted by Global Brands</h1>
+                    <p class="text-gray-500 text-md md:text-lg leading-relaxed">It is a long established fact that a
+                        reader will be </br> distracted by the
+                        readable content of a page when looking at its
+                        layout. The point of using.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-center gap-8">
+
+                    <a href="#" class="opacity-70 hover:opacity-100 transition duration-300">
+                        <img src="/logo/Amazon logo.png" alt="Amazon"
+                            class="h-32 w-auto grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+
+                    <a href="#" class="opacity-70 hover:opacity-100 transition duration-300">
+                        <img src="/logo/dropcam logo.png" alt="Dropcam"
+                            class="h-32 w-auto grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+
+                    <a href="#" class="opacity-70 hover:opacity-100 transition duration-300">
+                        <img src="/logo/google logo.png" alt="Google"
+                            class="h-32 w-auto grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+
+                    <a href="#" class="opacity-70 hover:opacity-100 transition duration-300">
+                        <img src="/logo/logitech logo.png" alt="Logitech"
+                            class="h-32 w-auto grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+
+                    <a href="#" class="opacity-70 hover:opacity-100 transition duration-300">
+                        <img src="/logo/mandiri logo - Copy.png" alt="Mandiri"
+                            class="h-32 w-auto grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <!-- ==================== TRUSTED BY GLOBAL BRANDS END ================= -->
+
+        <!-- ==================== CONTACT SECTION STARTS  ================= -->
+        <section id="contact" class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">Let’s Stay Connected</h1>
+                    <p class="text-gray-500 text-md md:text-lg leading-relaxed">It is a long established fact that a
+                        reader will be </br> distracted by the
+                        readable content of a page when looking at its
+                        layout. The point of using.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+
+                    <div class="md:w-1/3 bg-white shadow-xl p-8">
+                        <div>
+                            <h1 class="text-xl font-semibold mb-2">Email Address</h1>
+                            <p class="text-gray-500">support@startup.com</p>
+                        </div>
+                        <div class="mt-8">
+                            <h1 class="text-xl font-semibold mb-2">Office Location</h1>
+                            <p class="text-gray-500">76/A, Green valle, Califonia USA.</p>
+                        </div>
+                        <div class="mt-8">
+                            <h1 class="text-xl font-semibold mb-2">Phone Number</h1>
+                            <p class="text-gray-500">+009 8754 3433 223</p>
+                        </div>
+                        <div class="mt-8">
+                            <h1 class="text-xl font-semibold mb-2">Skype Email</h1>
+                            <p class="text-gray-500">example@yourmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="md:w-2/3 bg-white shadow-lg hover:shadow-xl p-8 space-y-6">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+
+                            <div class="flex-1">
+                                <label for="full-name" class="block font-semibold mb-2">Full name</label>
+                                <input type="text" id="full-name"
+                                    class="w-full mt-2 border rounded-xl px-4 py-2 focus:outline-none focus:border-blue-500 focus:ring-blue-500"
+                                    required>
+                            </div>
+                            <div class="flex-1">
+                                <label for="email address" class="block font-semibold mb-2">Email address</label>
+                                <input type="email" id="email-address"
+                                    class="w-full mt-2 border rounded-xl px-4 py-2 focus:outline-none focus:border-blue-500 focus:ring-blue-500"
+                                    required>
                             </div>
                         </div>
                         <div class="flex flex-col md:flex-row gap-6 items-center mt-6">
-                            
-                                <div class="flex-1 space-y-2">
-                                    <label for="phone" class="font-semibold">Phone number</label> <br>
-                                    <input type="phone" id="phone" class="mt-2 border rounded-xl px-4 py-2 border-gray-500" required>
-                                </div>
-                                <div class="flex-1 space-y-2">
-                                    <label for="subject" class="font-semibold">Subject</label> <br>
-                                    <input type="text" id="subject" class="mt-2 border rounded-xl px-4 py-2 border-gray-500" required>
-                                </div>
+
+                            <div class="flex-1">
+                                <label for="phone" class="block font-semibold mb-2">Phone number</label>
+                                <input type="phone" id="phone"
+                                    class="w-full mt-2 border rounded-xl px-4 py-2 focus:outline-none focus:border-blue-500 focus:ring-blue-500"
+                                    required>
+                            </div>
+                            <div class="flex-1">
+                                <label for="subject" class="block font-semibold mb-2">Subject</label>
+                                <input type="text" id="subject"
+                                    class="w-full mt-2 border rounded-xl px-4 py-2 focus:outline-none focus:border-blue-500 focus:ring-blue-500"
+                                    required>
+                            </div>
                         </div>
 
                         <div class="mt-6">
-                            <label for="textarea" class="font-semibold">Message:</label>
-                            <textarea name="text" id="text" class="mt-2 w-full border rounded-lg px-6 py-3  "></textarea>
+                            <label for="textarea" class="block font-semibold mb-2">Message:</label>
+                            <textarea name="text" id="text"
+                                class="mt-2 w-full border rounded-xl px-4 py-2 focus:outline-none focus:border-blue-500 focus:ring-blue-500"></textarea>
                         </div>
 
-                      <div class="flex justify-center mt-4 ">
-                        <button type="button" class="border rounded-xl px-4 py-2 bg-blue-600 text-white text-xl font-bold shadow">Send Message</button>
-                      </div>
+                        <div class="flex justify-center mt-4">
+                            <button type="button"
+                                class="w-full border rounded-xl px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-xl font-bold transition duration-300">Send
+                                Message</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </section>
+        <!-- ==================== CONTACT SECTION END  ================= -->
 
-        <!-- ==================== CTA SECTION ================= -->
-        <Section class="py-10 bg-blue-600 text-white">
-            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-6">
-        
+        <!-- ==================== CTA SECTION STARTS================= -->
+        <section class="py-10 bg-blue-600 text-white">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-6">
+
                 <!-- text -->
                 <div class="md:w-1/2">
                     <h1 class="text-4xl md:text-5xl font-extrabold">Join with 5000+ Startups Growing with Base.
-                      </h1>
-                    <p class="text-md text-gray-300 mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur leo.
-                    Ut venenatis rhoncus.</p>
+                    </h1>
+                    <p class="text-md text-gray-100 mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                        quis nibh lorem. Duis sed odio lorem. In a efficitur leo.
+                        Ut venenatis rhoncus.</p>
                 </div>
-        
+
                 <!-- button -->
-                <div class="md:w-1/2 flex justify-end items-center ">
-                    <button type="button" class="border rounded-full px-6 py-3 bg-white text-black text-md font-semibold">Get Started
-                        Now
+                <div class="md:w-1/2 flex justify-end items-center">
+                    <button type="button"
+                        class="border rounded-full px-6 py-3 md:px-8 md:py-4 bg-white text-black text-md md:text-lg font-semibold transition duration-300 ease-in-out hover:bg-gray-100 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        Get Started Now
                     </button>
-                </div>   
-           </div>   
-         </section>
-     </main>
-        
-        <!-- ==================== FOOTER STARTS  ================= -->
-        <footer class="bg-gray-800 py-12">
-            <div
-                class="max-w-7xl mx-auto px-6 flex justify-between items-center flex-col md:flex-row text-white gap-8 text-center md:text-left">
-        
-                <div>
-                    <h1 class="text-2xl">Base Agency</h1>
-                    <p class="text-md mt-4">Lorem ipsum, dolor sit amet <br>consectetur adipisicing elit. Officia, perspiciatis?
-                    </p>
-                </div>
-                 
-                <!-- Quick Links -->
-                <div class="flex flex-col space-y-2">
-                    <h1 class="text-2xl font-semibold mb-4">Quick Links</h1>
-                    <a href="#" class="hover:text-blue-500">Home</a>
-                    <a href="#" class="hover:text-blue-500">About</a>
-                    <a href="#" class="hover:text-blue-500">Product</a>
-                    <a href="#" class="hover:text-blue-500">Career</a>
-                    <a href="#" class="hover:text-blue-500">pricing</a>
-                </div>
-
-                <!-- Services-->
-                <div class="flex flex-col space-y-2">
-                    <h1 class="text-2xl font-semibold mb-4">Services</h1>
-                    <a href="#" class="hover:text-blue-500">Web Development</a>
-                    <a href="#" class="hover:text-blue-500">Graphics Design</a>
-                    <a href="#" class="hover:text-blue-500">Digital Marketing</a>
-                    <a href="#" class="hover:text-blue-500">UI/UX Designer</a>
-                    <a href="#" class="hover:text-blue-500">Web Designer</a>
-                </div>
-
-                <!-- Support -->
-                <div class="flex flex-col space-y-2">
-                    <h1 class="text-2xl font-semibold mb-4">Support</h1>
-                    <a href="#" class="hover:text-blue-500">company</a>
-                    <a href="#" class="hover:text-blue-500">Press Media</a>
-                    <a href="#" class="hover:text-blue-500">Our Blog</a>
-                    <a href="#" class="hover:text-blue-500">Contact Media</a>
-                    <a href="#" class="hover:text-blue-500">News</a>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="">
-                    <h2 class="text-2xl">Newsletter</h2>
-                    <input type="text" placeholder="Search..."
-                        class=" w-full border rounded-xl bg-white px-4 py-4 text-md mt-4 text-gray-900">
                 </div>
             </div>
-        
-            <p class="text-center text-md text-white mt-16">@Copy; 2025,All side reserved</p>
-        </footer>
-    </body>
-        
- </html>
+        </section>
+    </main>
+    <!-- ==================== CTA SECTION END ================= -->
 
+    <!-- ==================== FOOTER SECTION STARTS ================= -->
+    <footer class="bg-gradient-to-r from-gray-800 via-gray-900 to-black py-10 md:py-12 text-white shadow-inner">
+        <div
+            class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left ">
 
-        
-        
-    
-    
-    
-   
-     
-             
-   
+            <div>
+                <h2 class="text-2xl font-bold">Base Agency</h2>
+                <p class="text-md mt-4">Lorem ipsum, dolor sit amet <br>consectetur adipisicing elit.
+                    Officia,perspiciatis?</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-500">About</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Product</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Career</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Pricing</a></li>
+                </ul>
+            </div>
+
+            <!-- Services-->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Services</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-blue-500">Web Development</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Graphics Design</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Digital Marketing</a></li>
+                    <li><a href="#" class="hover:text-blue-500">UI/UX Designer</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Web Designer</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Support</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-blue-500">Company</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Press Media</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Our Blog</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Contact Media</a></li>
+                    <li><a href="#" class="hover:text-blue-500">News</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Newsletter</h3>
+                <div class="mt-4">
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full border rounded-xl bg-white px-4 py-2 text-md text-gray-900 focus:border-blue-500 focus:ring-blue-500 focus:ring-2">
+                    <button
+                        class="bg-blue-500 mt-4 text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+
+            <div class="mt-8 flex items-center gap-4">
+                <!-- Social Icons -->
+                <a href="#" class="hover:text-blue-500 transition text-xl"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-500 transition text-xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-500 transition text-xl"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-blue-500 transition text-xl"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <p class="text-center text-md text-white mt-16">© 2025 Base Agency. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- ==================== FOOTER SECTION STARTS ================= -->
+
+    <!-- TOGGLE ANIMATION -->
+    <script>
+        const btn = document.getElementById("mobilebtn");
+        const menu = document.getElementById("mobilemenu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+
+</html>
